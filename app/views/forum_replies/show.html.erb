@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @forum_reply.title %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @forum_reply.status %>
+</p>
+
+<p>
+  <strong>Forum thread:</strong>
+  <%= @forum_reply.forum_thread.id %>
+</p>
+
+<p>
+  <strong>Forum reply:</strong>
+  <%= @forum_reply.forum_reply.id unless @forum_reply.forum_reply.nil? %>
+</p>
+
+<%= link_to 'Edit', edit_forum_thread_forum_reply_path %> |
+<%= link_to 'Back', forum_thread_forum_replies_path %>
