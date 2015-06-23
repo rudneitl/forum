@@ -14,6 +14,15 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'pry'
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'rspec-rails', '~> 3.2.1'
+  gem 'rspec-its', '~> 1.0.1'
+  gem 'rspec_junit_formatter', '~> 0.2.0'
+  gem 'simplecov-rcov', '~> 0.2.3'
+end
+
+group :production do
+  gem 'pg'
 end
 
