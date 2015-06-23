@@ -1,5 +1,5 @@
 class FinderBlackListService
   def self.all
-    BlackList.all
+    BlackList.select(:title).all
   end
 end

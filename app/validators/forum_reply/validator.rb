@@ -8,7 +8,7 @@ class ForumReply
     protected
 
     def validate_black_list_words(record)
-      record.errors.add 'myerror', 'iiiii faio'
+      record.title.gsub! /(rudnei|teixeira)/i, 'xxxx'
     end
 
     # def validate_limit_bet_by_round(record)
