@@ -1,6 +1,6 @@
 class FinderTopicService
   def self.count
-    criteria.count
+    criteria.where(topic: nil).count
   end
 
   def self.all

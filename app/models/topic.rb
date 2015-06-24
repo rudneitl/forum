@@ -1,6 +1,6 @@
 class Topic < ActiveRecord::Base
   TOPIC_STATUS = %w(active inactive)
-  LIMIT_PER_PAGE = 5
+  LIMIT_PER_PAGE = 10
 
   belongs_to :topic, class_name: 'Topic'
   has_many :topics, class_name: 'Topic'
