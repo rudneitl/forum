@@ -21,10 +21,8 @@ class BlackListsController < ApplicationController
     respond_to do |format|
       if @black_list.save
         format.html { redirect_to @black_list, notice: 'Black list was successfully created.' }
-        format.json { render :show, status: :created, location: @black_list }
       else
         format.html { render :new }
-        format.json { render json: @black_list.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -33,10 +31,8 @@ class BlackListsController < ApplicationController
     respond_to do |format|
       if @black_list.update(black_list_params)
         format.html { redirect_to @black_list, notice: 'Black list was successfully updated.' }
-        format.json { render :show, status: :ok, location: @black_list }
       else
         format.html { render :edit }
-        format.json { render json: @black_list.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -45,7 +41,6 @@ class BlackListsController < ApplicationController
     @black_list.destroy
     respond_to do |format|
       format.html { redirect_to black_lists_url, notice: 'Black list was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
