@@ -23,7 +23,7 @@ class TopicsController < ApplicationController
 
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to @topic, notice: 'Topic was successfully created.' }
+        format.html { redirect_to topics_url, notice: I18n.translate('topic.message.success_create') }
       else
         format.html { render :new }
       end
@@ -33,7 +33,7 @@ class TopicsController < ApplicationController
   def update
     respond_to do |format|
       if @topic.update(topic_params)
-        format.html { redirect_to @topic, notice: 'Topic was successfully updated.' }
+        format.html { redirect_to @topic, notice: I18n.translate('topic.message.success_update') }
       else
         format.html { render :edit }
       end
@@ -43,7 +43,7 @@ class TopicsController < ApplicationController
   def destroy
     @topic.destroy
     respond_to do |format|
-      format.html { redirect_to topics_url, notice: 'Topic was successfully destroyed.' }
+      format.html { redirect_to topics_url, notice: I18n.translate('topic.message.success_destroy') }
     end
   end
 

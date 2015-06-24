@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Black Lists</h1>
+<h1><%= t('black_list.title.index') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Word</th>
+      <th><%=  %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,9 +14,9 @@
     <% @black_lists.each do |black_list| %>
       <tr>
         <td><%= black_list.word %></td>
-        <td><%= link_to 'Show', black_list %></td>
-        <td><%= link_to 'Edit', edit_black_list_path(black_list) %></td>
-        <td><%= link_to 'Destroy', black_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('black_list.action.show'), black_list %></td>
+        <td><%= link_to t('black_list.action.update'), edit_black_list_path(black_list) %></td>
+        <td><%= link_to t('black_list.action.destroy'), black_list, method: :delete, data: { confirm: t('black_list.label.destroy') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Black list', new_black_list_path %>
+<%= link_to t('black_list.action.new'), new_black_list_path %>

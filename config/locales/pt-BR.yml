@@ -14,11 +14,34 @@ pt-BR:
     action:
       new: 'Criar novo tópico'
       reply: 'Responder tópico'
+    message:
+      success_create: 'Tópico criado com sucesso.'
+      success_update: 'Tópico alterado com sucesso.'
+      success_destroy: 'Tópico removido com sucesso.'
+  black_list:
+    label:
+      error: 'impede esta palavra de ser salva'
+      destroy: 'Você tem certeza que deseja remover esta palavra?'
+    title:
+      index: 'Listagem de palavras da black list'
+      new: 'Novo palavra'
+      edit: 'Editar palavra'
+    action:
+      new: 'Criar nova palavra'
+      show: 'Ver palavra'
+      update: 'Editar palavra'
+      destroy: 'Remover palavra'
+    message:
+      success_create: 'Palavra criada com sucesso.'
+      success_update: 'Palavra alterada com sucesso.'
+      success_destroy: 'Palavra removida com sucesso.'
   helpers:
     label:
       topic:
         description: 'Descrição'
         status: 'Status'
+      black_list:
+        word: 'Palavra'
     submit: 
       create: 'Criar'
       update: 'Editar'

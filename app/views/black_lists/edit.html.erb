@@ -1,6 +1,6 @@
-<h1>Editing Black List</h1>
+<h1><%= t('black_list.title.edit') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @black_list %> |
-<%= link_to 'Back', black_lists_path %>
+<%= link_to t('application.action.show'), @black_list %> |
+<%= link_to t('application.action.back'), black_lists_path %>

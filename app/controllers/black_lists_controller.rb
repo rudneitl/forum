@@ -20,7 +20,7 @@ class BlackListsController < ApplicationController
 
     respond_to do |format|
       if @black_list.save
-        format.html { redirect_to @black_list, notice: 'Black list was successfully created.' }
+        format.html { redirect_to @black_list, notice: I18n.translate('black_list.message.success_create') }
       else
         format.html { render :new }
       end
@@ -30,7 +30,7 @@ class BlackListsController < ApplicationController
   def update
     respond_to do |format|
       if @black_list.update(black_list_params)
-        format.html { redirect_to @black_list, notice: 'Black list was successfully updated.' }
+        format.html { redirect_to @black_list, notice: I18n.translate('black_list.message.success_update') }
       else
         format.html { render :edit }
       end
@@ -40,7 +40,7 @@ class BlackListsController < ApplicationController
   def destroy
     @black_list.destroy
     respond_to do |format|
-      format.html { redirect_to black_lists_url, notice: 'Black list was successfully destroyed.' }
+      format.html { redirect_to black_lists_url, notice: I18n.translate('black_list.message.success_destroy') }
     end
   end
 
