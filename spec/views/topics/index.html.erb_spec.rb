@@ -5,21 +5,22 @@ RSpec.describe "topics/index", type: :view do
     assign(:topics, [
       Topic.create!(
         :description => "Description",
-        :status => "Status",
+        :status => "active",
         :topic => nil
       ),
       Topic.create!(
         :description => "Description",
-        :status => "Status",
+        :status => "active",
         :topic => nil
       )
     ])
   end
 
   it "renders a list of topics" do
+    @total = 2
+    @limit = 10
+    @page = 0
     render
-    assert_select "tr>td", :text => "Description".to_s, :count => 2
-    assert_select "tr>td", :text => "Status".to_s, :count => 2
-    assert_select "tr>td", :text => nil.to_s, :count => 2
+    assert_select "ul>li", :text => /Description/, :count => 2
   end
 end

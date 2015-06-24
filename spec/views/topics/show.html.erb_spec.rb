@@ -4,7 +4,7 @@ RSpec.describe "topics/show", type: :view do
   before(:each) do
     @topic = assign(:topic, Topic.create!(
       :description => "Description",
-      :status => "Status",
+      :status => "active",
       :topic => nil
     ))
   end
