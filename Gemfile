@@ -22,7 +22,7 @@ group :development, :test do
   gem 'simplecov-rcov', '~> 0.2.3'
 end
 
-group :production do
-  gem 'pg', '~> 0.18.2'
-end
+# group :production do
+#   gem 'pg', '~> 0.18.2'
+# end
 

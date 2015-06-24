@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Topics</h1>
+
+<%= link_to 'New Topic', new_topic_path %>
+
+<ul>
+<% @topics.each do |t| %>
+    <%= render partial: "item", collection: [t], as: :topic %>
+<% end %>
+</ul>

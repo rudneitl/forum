@@ -1,0 +1,11 @@
+<li>
+  <%= topic.description %>
+
+  <%= link_to 'Reply', new_child_topic_path(topic.id) %>
+
+<% unless topic.topics.empty? %>
+  <ul>
+    <%= render partial: "topics/item", collection: FinderTopicService.find_by_topic(topic).where(status: :active), as: :topic %>
+  </ul>
+<% end %>
+</li>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @topic.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @topic.status %>
+</p>
+
+<% unless @topic.topic.nil? %>
+<p>
+  <strong>Topic:</strong>
+  <%= @topic.topic.description %>
+</p>
+<% end %>
+
+<%= link_to 'Back', topics_path %>
