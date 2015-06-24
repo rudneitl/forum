@@ -1,7 +1,7 @@
 <li>
   <%= topic.description %>
 
-  <%= link_to 'Reply', new_child_topic_path(topic.id) %>
+  <%= link_to t('topic.action.reply'), new_child_topic_path(topic.id) %>
 
 <% unless topic.topics.empty? %>
   <ul>

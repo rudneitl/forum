@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Topics</h1>
-
-<%= link_to 'New Topic', new_topic_path %>
+<h1><%= t('topic.action.index') %></h1>
+<%= link_to t('topic.action.new'), new_topic_path %>
 
 <ul>
 <% @topics.each do |t| %>

@@ -1,6 +1,6 @@
-<h1>Editing Topic</h1>
+<h1><%= t('topic.title.edit') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @topic %> |
-<%= link_to 'Back', topics_path %>
+<%= link_to t('application.action.show'), @topic %> |
+<%= link_to t('application.action.back'), topics_path %>

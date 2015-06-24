@@ -1,0 +1,25 @@
+pt-BR:
+  application:
+    label:
+      error: 'erro'
+    action:
+      back: 'Voltar'
+  topic:
+    label:
+      error: 'impede este tópico de ser salvo'
+    title:
+      index: 'Listagem de tópicos'
+      new: 'Novo tópico'
+      edit: 'Editar tópico'
+    action:
+      new: 'Criar novo tópico'
+      reply: 'Responder tópico'
+  helpers:
+    label:
+      topic:
+        description: 'Descrição'
+        status: 'Status'
+    submit: 
+      create: 'Criar'
+      update: 'Editar'
+
