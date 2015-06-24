@@ -27,3 +27,4 @@ $ bundle exec rails s
   - Implementar o Model Topic como polymorphic
   - Utilizar decorators
   - Implementar um arquivo para inicialização do projeto
+  - Implementar specs
