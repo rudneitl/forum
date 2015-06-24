@@ -3,7 +3,10 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def index
-    @topics = FinderTopicService.find_by_topic(nil)
+    @total = FinderTopicService.count
+    @limit = Topic.limit_default
+    @page = params[:page].present? ? params[:page] : 0
+    @topics = FinderTopicService.find_by_topic(nil, @limit, @page)
   end
 
   def show
@@ -55,10 +58,10 @@ class TopicsController < ApplicationController
   end
 
   def set_parent_topic
-    @parent_topic = Topic.find(params[:topic_id]) if params[:topic_id].present? 
+    @parent_topic = Topic.find(params[:topic_id]) if params[:topic_id].present?
   end
 
   def topic_params
-    params.require(:topic).permit(:description, :status, :topic_id)
+    params.require(:topic).permit(:description, :status, :topic_id, :limit, :page)
   end
 end

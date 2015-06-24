@@ -14,3 +14,48 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var FORUM = (function() {
+  'use strict';
+
+  var page = 0;
+
+  var configs = {
+    topic: {
+      url: '/topics',
+      paginator : '#p'
+    }
+  }
+
+  function init(custom_configs) {
+    try {
+      $.extend(true, configs, custom_configs);
+      register();
+    } catch(e) {}
+  }
+
+  function register(){
+    $(configs.topic.paginator).on({change: paginate})
+  }
+
+  function paginate(e) {
+    e.preventDefault();
+    page = $(this).val();
+    goToPage();
+  }
+
+  function goToPage() {
+    var redirect = configs.topic.url + '?page=' + page;
+    console.log(redirect);
+    location.href = redirect;
+  }
+
+  return {
+    init: init
+  };
+
+}());
+
+$(document).ready(function() {
+  FORUM.init();
+});

@@ -1,4 +1,8 @@
 class FinderTopicService
+  def self.count
+    criteria.count
+  end
+
   def self.all
     criteria.all
   end
@@ -7,8 +11,11 @@ class FinderTopicService
     criteria.find(topic_id)
   end
 
-  def self.find_by_topic(topic)
-    criteria.where(topic: topic)
+  def self.find_by_topic(topic, limit=nil, page=nil)
+    finder = criteria.where(topic: topic)
+    finder = finder.limit(limit) unless limit.nil?
+    finder = finder.offset(limit.to_i * page.to_i) unless page.nil? && limit.nil?
+    finder
   end
 
   protected
