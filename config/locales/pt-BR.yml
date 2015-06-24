@@ -1,8 +1,13 @@
 pt-BR:
   application:
+    menu:
+      description: 'Menu'
+      black_list: 'Black list'
+      topic: 'Fórum'
     label:
       error: 'erro'
     action:
+      show: 'Ver'
       back: 'Voltar'
   topic:
     label:
@@ -24,7 +29,7 @@ pt-BR:
       destroy: 'Você tem certeza que deseja remover esta palavra?'
     title:
       index: 'Listagem de palavras da black list'
-      new: 'Novo palavra'
+      new: 'Nova palavra'
       edit: 'Editar palavra'
     action:
       new: 'Criar nova palavra'

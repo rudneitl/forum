@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<dl>
+  <dt><%= t('application.menu.description') %></dt>
+  <dd><%= link_to t('application.menu.black_list'), black_lists_url %></dd>
+  <dd><%= link_to t('application.menu.topic'), topics_url %></dd>
+</dl>
+
 <%= yield %>
 
 </body>
