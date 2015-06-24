@@ -11,6 +11,13 @@
     </div>
   <% end %>
 
+  <% unless @parent_topic.nil? %>
+  <div class="field">
+    <%= t('helpers.label.topic.topic') %><br>
+    <%= @parent_topic.description %>
+  </div>
+  <% end %>
+
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>

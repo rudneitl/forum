@@ -15,6 +15,7 @@ class TopicsController < ApplicationController
   end
 
   def edit
+    @parent_topic = @topic.topic
   end
 
   def create

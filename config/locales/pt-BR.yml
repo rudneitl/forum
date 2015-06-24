@@ -43,6 +43,7 @@ pt-BR:
   helpers:
     label:
       topic:
+        topic: 'Tópico'
         description: 'Descrição'
         status: 'Status'
       black_list:
