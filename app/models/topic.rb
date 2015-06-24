@@ -6,7 +6,9 @@ class Topic < ActiveRecord::Base
 
   validates :description,
             :status,
-            presence: true
+            presence: {
+              message: I18n.translate('topic.message.error.presence')
+            }
 
   validates :status,
             inclusion: { in: TOPIC_STATUS }

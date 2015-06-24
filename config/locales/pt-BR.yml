@@ -23,6 +23,8 @@ pt-BR:
       success_create: 'Tópico criado com sucesso.'
       success_update: 'Tópico alterado com sucesso.'
       success_destroy: 'Tópico removido com sucesso.'
+      error:
+        presence: 'precisa ser preenchido corretamente.'
   black_list:
     label:
       error: 'impede esta palavra de ser salva'
@@ -40,6 +42,8 @@ pt-BR:
       success_create: 'Palavra criada com sucesso.'
       success_update: 'Palavra alterada com sucesso.'
       success_destroy: 'Palavra removida com sucesso.'
+      error:
+        presence: 'precisa ser preenchido corretamente.'
   helpers:
     label:
       topic:

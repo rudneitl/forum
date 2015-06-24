@@ -1,5 +1,8 @@
 class BlackList < ActiveRecord::Base
-  validates :word, presence: true
+  validates :word, 
+            presence: {
+              message: I18n.translate('black_list.message.error.presence')
+            }
 
   def self.sanitize(string, mask)
     black_list = FinderBlackListService.all
